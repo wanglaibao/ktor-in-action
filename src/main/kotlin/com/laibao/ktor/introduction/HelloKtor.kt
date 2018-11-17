@@ -18,7 +18,7 @@ fun main(args: Array<String>) {
                 call.respondText("Hello World!",ContentType.Text.Plain)
             }
             get("/hello") {
-                call.respondText("Hello World!")
+                call.respondText("Hello World! 金戈，这里是Ktor WEB World,你可以来体验快感")
             }
         }
     }
