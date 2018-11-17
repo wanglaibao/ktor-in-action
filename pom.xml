@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">    
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.laibao.ktor</groupId>
     <artifactId>ktor-in-action</artifactId>
@@ -35,6 +35,21 @@
         <junit.version>4.12</junit.version>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>ktor</id>
+            <url>http://dl.bintray.com/kotlin/ktor</url>
+        </repository>
+        <repository>
+            <id>kotlinx</id>
+            <url>http://dl.bintray.com/kotlin/kotlinx</url>
+        </repository>
+        <repository>
+            <id>jcenter</id>
+            <url>http://jcenter.bintray.com</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
@@ -55,6 +70,13 @@
         </dependency>
 
         <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+
+        <!--
+        <dependency>
             <groupId>org.jetbrains.kotlinx</groupId>
             <artifactId>kotlinx-coroutines-jdk8</artifactId>
             <version>${kotlinx.coroutines.version}</version>
@@ -72,46 +94,49 @@
             <version>${kotlinx.coroutines.version}</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.jetbrains.kotlinx/atomicfu -->
         <dependency>
             <groupId>org.jetbrains.kotlinx</groupId>
             <artifactId>atomicfu</artifactId>
             <version>0.11.12</version>
         </dependency>
+        -->
 
-
-        <!-- https://mvnrepository.com/artifact/io.ktor/ktor-server-core -->
+        <!--
         <dependency>
             <groupId>io.ktor</groupId>
             <artifactId>ktor-server-core</artifactId>
             <version>${ktor.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.ktor/ktor-client-core-jvm -->
+        -->
+
+        <dependency>
+            <groupId>io.ktor</groupId>
+            <artifactId>ktor-server-netty</artifactId>
+            <version>${ktor.version}</version>
+        </dependency>
+
+        <!--
         <dependency>
             <groupId>io.ktor</groupId>
             <artifactId>ktor-client-core-jvm</artifactId>
             <version>${ktor.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.ktor/ktor-client-core -->
         <dependency>
             <groupId>io.ktor</groupId>
             <artifactId>ktor-client-core</artifactId>
             <version>${ktor.version}</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/io.ktor/ktor-utils -->
         <dependency>
             <groupId>io.ktor</groupId>
             <artifactId>ktor-utils</artifactId>
             <version>${ktor.version}</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/io.ktor/ktor-utils-jvm -->
         <dependency>
             <groupId>io.ktor</groupId>
             <artifactId>ktor-utils-jvm</artifactId>
             <version>${ktor.version}</version>
         </dependency>
+        -->
 
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
